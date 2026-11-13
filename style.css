@@ -1,0 +1,187 @@
+/* Font sans for arabic*/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@100..900&display=swap');
+/* Font Poppins for english*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --praimery: #00f2fe;
+    --text: #e0e0e0;
+    --white: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: radial-gradient(400px circle, black, #0e111a);
+    min-height: 100vh;
+    cursor: none;
+    font-family: "Poppins", "Noto Sans Arabic", sans-serif;
+}
+
+.cursor {
+    width: 15px;
+    height: 15px;
+    background-color: #e2deded9;
+    border-radius: 50%;
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    translate: -50% -50%;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.cursor.grow {
+    transform: scale(3);
+    background-color: #f1f1f170;
+}
+
+button, a {
+    cursor: none;
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+}
+
+.hamburger {
+    display: none;
+}
+
+.navbar {
+    display: flex;
+    gap: 30px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: var(--text);
+    font-weight: 400;
+    position: relative;
+    transition: all .3s ease; /* تم تصحيح transform إلى transition */
+}
+
+.navbar a::after {
+    content: "";
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: var(--white);
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    transform: translateX(-50%);
+    transition: opacity .3s ease; /* تم تصحيح transform إلى transition */
+    opacity: 0;
+}
+
+.navbar a:hover {
+    color: var(--praimery);
+}
+
+.navbar a:hover::after {
+    opacity: 1;
+}
+
+.contact-wp {
+    padding: 4px 30px;
+    background-color: #01c301;
+    box-shadow: 1px 1px 10px #01c301;
+    text-decoration: none;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 15px;
+    color: #fff;
+    transition: all .3s ease;
+}
+
+.contact-wp:hover {
+    box-shadow: 1px 1px 20px #01c301;
+    transform: translateY(-2px);
+}
+
+.contact-wp i {
+    font-size: 20px;
+}
+
+@media (max-width: 850px) {
+    .header {
+        position: relative;
+        width: 100%;
+        z-index: 8888;
+        background-color: black;
+    }
+
+    .navbar {
+        position: absolute;
+        top: -300px;
+        left: 0;
+        flex-direction: column;
+        background-color: black;
+        width: 100%;
+        padding: 20px 25px;
+        transition: all .4s ease;
+        z-index: -1;
+        box-shadow: 0 10px 10px rgba(0,0,0,0.5);
+        opacity: 0;
+    }
+
+    .navbar.active {
+        top: 80px;
+        opacity: 1;
+    }
+
+    .navbar a:hover::after {
+        opacity: 0;
+    }
+
+    .contact-wp {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        width: 45px;
+        height: 45px;
+        border: 1px solid #fff;
+        border-radius: 5px;
+        cursor: none;
+    }
+
+    .hamburger i {
+        position: absolute;
+        font-size: 24px;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        color: #fff;
+    }
+
+    /* إظهار الأيقونة النشطة فقط */
+    .hamburger i.active {
+        opacity: 1;
+        visibility: visible;
+        transform: rotate(180deg);
+    }
+}
