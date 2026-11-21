@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <title>Document</title>
 </head>
@@ -28,13 +27,16 @@
             </div>
             <a href="#" class="contact-wp"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
         </header>
+
         <div class="hero">
             <div class="hero-top">
                 <p>Hero Section</p>
-                <h1>CREATIVE GRAPHIC DESIGNER <br>& PHOTOSHOP EXPERT</h1>
+                <h1 class="h1" data-text="CREATIVE GRAPHIC DESIGNER"></h1>
+                <h1 class="h1-second" data-text="& PHOTOSHOP EXPERT"></h1>
                 <p>[ABD ALHADE BANNAN]</p>
                 <a href="#">VIEW MY PORTFOLIO</a>
             </div>
+
             <div class="hero-bottom">
                 <div class="hero-img-top">
                     <img src="products/1.jpg" class="img-1" alt="">
@@ -51,6 +53,137 @@
             </div>
         </div>
     </section>
+
+    <!-- About Me Section -->
+    <section class="section about-section" id="about">
+        <div class="section-header">
+            <span>WHO I AM</span>
+            <h2>About Me</h2>
+        </div>
+        <div class="about-grid">
+            <div class="about-card">
+                <h3>Precision Retouching &amp; Compositing</h3>
+                <p>
+                    I'm Abd Alhade Bannan, a graphic designer and Photoshop specialist focused on
+                    high-end photo manipulation, commercial composites, and clean visual storytelling
+                    that makes brands stand out.
+                </p>
+                <div class="stats-row">
+                    <div class="stat-box">
+                        <strong data-num="5">0</strong>
+                        <span>Years Experience</span>
+                    </div>
+                    <div class="stat-box">
+                        <strong data-num="180">0</strong>
+                        <span>Completed Designs</span>
+                    </div>
+                    <div class="stat-box">
+                        <strong data-num="90">0</strong>
+                        <span>Happy Clients</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section skills-section" id="skills">
+        <div class="section-header">
+            <span>EXPERTISE</span>
+            <h2>Photoshop &amp; Design Skills</h2>
+        </div>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+                <h3>Photo Manipulation</h3>
+                <p>Seamless blending, lighting match, perspective warping, and surreal visual scenes.</p>
+                <div class="skill-bar"><span data-width="96%"></span></div>
+            </div>
+            <div class="skill-card">
+                <i class="fa-solid fa-sparkles"></i>
+                <h3>High-End Retouching</h3>
+                <p>Frequency separation, dodge &amp; burn, color grading, and crisp product polishing.</p>
+                <div class="skill-bar"><span data-width="94%"></span></div>
+            </div>
+            <div class="skill-card">
+                <i class="fa-solid fa-layer-group"></i>
+                <h3>Social &amp; Ad Creatives</h3>
+                <p>High-CTR campaign banners, thumbnails, and cohesive social media visual systems.</p>
+                <div class="skill-bar"><span data-width="92%"></span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products / Showcase Section -->
+    <section class="section products-section" id="products">
+        <div class="section-header">
+            <span>SELECTED WORK</span>
+            <h2>Featured PSD &amp; Design Works</h2>
+        </div>
+        <div class="filter-tabs">
+            <button type="button" class="filter-btn active" data-filter="all">All</button>
+            <button type="button" class="filter-btn" data-filter="manipulation">Manipulation</button>
+            <button type="button" class="filter-btn" data-filter="retouch">Retouching</button>
+            <button type="button" class="filter-btn" data-filter="ads">Ad Creatives</button>
+        </div>
+        <div class="products-grid">
+            <article class="product-card" data-category="manipulation">
+                <img src="products/1.jpg" alt="Creative Composite 01">
+                <div class="product-info">
+                    <span>Manipulation</span>
+                    <h3>Atmospheric Scene Composite</h3>
+                </div>
+            </article>
+            <article class="product-card" data-category="retouch">
+                <img src="products/2.jpg" alt="Product Retouch 02">
+                <div class="product-info">
+                    <span>Retouching</span>
+                    <h3>Commercial Lighting &amp; Polish</h3>
+                </div>
+            </article>
+            <article class="product-card" data-category="ads">
+                <img src="products/3.jpg" alt="Campaign Poster 03">
+                <div class="product-info">
+                    <span>Ad Creatives</span>
+                    <h3>High-Impact Campaign Key Art</h3>
+                </div>
+            </article>
+            <article class="product-card" data-category="manipulation">
+                <img src="products/4.jpg" alt="Visual Concept 04">
+                <div class="product-info">
+                    <span>Manipulation</span>
+                    <h3>Surreal Brand Concept</h3>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact-section" id="contact">
+        <div class="section-header">
+            <span>GET IN TOUCH</span>
+            <h2>Start Your Design Project</h2>
+        </div>
+        <div class="contact-wrapper">
+            <form class="contact-form" id="contactForm">
+                <input type="text" id="clientName" placeholder="Your Name" required>
+                <input type="email" id="clientEmail" placeholder="Your Email" required>
+                <select id="serviceType">
+                    <option value="Photo Manipulation">Photo Manipulation</option>
+                    <option value="Product / Portrait Retouching">Product / Portrait Retouching</option>
+                    <option value="Social Media & Ad Creatives">Social Media &amp; Ad Creatives</option>
+                    <option value="Full Brand Visuals">Full Brand Visuals</option>
+                </select>
+                <textarea id="projectDetails" rows="4" placeholder="Describe your idea, dimensions, deadline, or references..." required></textarea>
+                <button type="submit" class="submit-btn">Send Project Brief</button>
+                <p class="form-status" id="formStatus"></p>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>© 2026 Abd Alhade Bannan — Creative Graphic Designer &amp; Photoshop Expert</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
